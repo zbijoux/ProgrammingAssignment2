@@ -16,7 +16,7 @@ makeCacheMatrix <- function(M = matrix()){
        ## setting the value of the Matrix 
         
         setM <- function(A){
-           M <- A
+           M <<- A
           IM <<- NULL  ## IM is the inverse of the matrix M
 }
 
@@ -30,7 +30,7 @@ makeCacheMatrix <- function(M = matrix()){
 
    ## getting the value of the inverse Matrix
        
-       getIM <- function() I 
+       getIM <- function() IM 
        list(setM=setM, getM=getM, 
            setIM=setIM, getIM=getIM)
 }
